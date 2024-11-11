@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Novell Services Login</h1>
+    <form action="{% url 'selection' %}">
+      Username:
+      <input type="text" name="name" />
+      <br />
+
+      Password: <input type="password" name="pass" />
+      <br />
+
+      City of emplyment: <input type="text" name="city" />
+
+      <br />
+
+      <br /><br />
+
+      Please specify your role: <br />
+      <div class="form-check">
+        <input type="radio" name="role" value="Admin" /> Admin <br />
+      </div>
+      <div class="form-check">
+        <input type="radio" name="role" value="Engineer" /> Engineer <br />
+      </div>
+
+      <div class="form-check">
+        <input type="radio" name="role" value="Manager" /> Manager <br />
+      </div>
+
+      <div class="form-check">
+        <input type="radio" name="role" value="Guest" /> Guest <br />
+      </div>
+
+      <br /><br />
+
+      Single Sign-on to the following: <br />
+      <div class="form-check">
+        <input type="checkbox" name="Mail" id="mail" /> Mail<br />
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" name="Payroll" id="Payroll" /> Payroll <br />
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" name="selfService" id="selfService" /> Self
+        Service<br />
+      </div>
+
+      <br />
+
+      <input type="submit" name="confirm" value="Submit" />
+    </form>
+  </body>
+</html>
