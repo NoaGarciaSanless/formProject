@@ -20,5 +20,5 @@ from form import views
 
 urlpatterns = [
     path('', views.home),
-    path('selection/', views.mostrar, name="selection")
+    path('result/', views.mostrar, name="result")
 ]

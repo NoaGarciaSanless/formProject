@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+  </head>
+
+  <body>
+    <h1>Selected fields</h1>
+    <div class="field">Name: {{ data.Name|default:"Not set" }}</div>
+    <div class="field">City: {{ data.City|default:"Not set" }}</div>
+    <div class="field">Server: {{ data.Server|default:"Not set" }}</div>
+    <div class="field">Role: {{ data.Role|default:"Not set" }}</div>
+
+    <div class="field">
+      Mail: {% if data.Mail %} Mail selected {% else %} No proporcionado {%
+      endif %}
+    </div>
+    <div class="field">
+      Payroll: {% if data.Payroll %} Payroll selected {% else %} No
+      proporcionado {% endif %}
+    </div>
+    <div class="field">
+      Self Service: {% if data.SelfService %} Self Service selected {% else %}
+      Not selected {% endif %}
+    </div>
+  </body>
+</html>

@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form</title>
   </head>
   <body>
     <h1>Novell Services Login</h1>
-    <form action="{% url 'selection' %}">
+    <form action="{% url 'result' %}">
       Username:
       <input type="text" name="name" />
       <br />
@@ -16,6 +16,15 @@
       <br />
 
       City of emplyment: <input type="text" name="city" />
+
+      <br />
+
+      Web Server:
+      <select name="server">
+        <option value="Apache">Apache</option>
+        <option value="Engine x">Engine x</option>
+        <option value="IIS">IIS</option>
+      </select>
 
       <br />
 

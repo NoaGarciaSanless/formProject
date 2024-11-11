@@ -7,11 +7,23 @@ def home(request):
 
 
 def mostrar(request):
-    opcion = request.GET.get('role')
+    name = request.GET.get('name')
+    city = request.GET.get('city')
+    server = request.GET.get('server')
+    role = request.GET.get('role')
     
-    preferencias = request.GET.getlist('preferencias')
+    mail = request.GET.get('Mail')
+    payroll = request.GET.get('Payroll')
+    selfService = request.GET.get('selfService')
     
-    response_text = f"Boton de radio seleccionado: {opcion}<br>"
-    response_text += "Preferencias seleccionadas: " + ", ".join(preferencias)
+    data= {
+        "Name" : name,
+        "City" : city,
+        "Server" : server,
+        "Role" : role,
+        "Mail" : mail,
+        "Payroll" : payroll,
+        "SelfService" : selfService,   
+    }
     
-    return HttpResponse(response_text)
+    return render(request, "form/result.html", {"data" :data})
