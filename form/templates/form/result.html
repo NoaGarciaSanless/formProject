@@ -4,26 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Result</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
-  <body>
-    <h1>Selected fields</h1>
-    <div class="field">Name: {{ data.Name|default:"Not set" }}</div>
-    <div class="field">City: {{ data.City|default:"Not set" }}</div>
-    <div class="field">Server: {{ data.Server|default:"Not set" }}</div>
-    <div class="field">Role: {{ data.Role|default:"Not set" }}</div>
+  <body class="p-4">
+    <h1 class="mb-4">Selected fields</h1>
+    <div class="p-3 border rounded">
+      <div class="mb-3">Name: {{ data.Name|default:"Not set" }}</div>
+      <div class="mb-3">City: {{ data.City|default:"Not set" }}</div>
+      <div class="mb-3">Server: {{ data.Server|default:"Not set" }}</div>
+      <div class="mb-3">Role: {{ data.Role|default:"Not set" }}</div>
 
-    <div class="field">
-      Mail: {% if data.Mail %} Mail selected {% else %} No proporcionado {%
-      endif %}
-    </div>
-    <div class="field">
-      Payroll: {% if data.Payroll %} Payroll selected {% else %} No
-      proporcionado {% endif %}
-    </div>
-    <div class="field">
-      Self Service: {% if data.SelfService %} Self Service selected {% else %}
-      Not selected {% endif %}
+      <!-- Selectores para poner un texto u otro segun el contenido de los checkbox -->
+      <div class="mb-3">
+        Mail: {% if data.Mail %} Mail selected {% else %} No proporcionado {% endif %}
+      </div>
+      <div class="mb-3">
+        Payroll: {% if data.Payroll %} Payroll selected {% else %} No
+        proporcionado {% endif %}
+      </div>
+      <div class="mb-3">
+        Self Service: {% if data.SelfService %} Self Service selected {% else %}
+        Not selected {% endif %}
+      </div>
     </div>
   </body>
 </html>
